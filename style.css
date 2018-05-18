@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script|Ubuntu|Roboto:400,700);
 /* general styles */
-body{
+*{
     margin:0;
     padding:0;
 }
 
+/* Start Navigation Bar */
 .container{
     background-color: rgba(247, 247, 247);
     padding: 10px 0px 0 5px;
@@ -14,30 +15,9 @@ body{
     z-index: 5;
 }
 
-section {
-	display: flex;
-	flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px auto; 
-}
-
-section:not(.welcome):nth-child(even) {
-    background-color: #f5f5f5;
-    
-}
-
-hr{
-    width: 250px;
-	height: 3px;
-	border: 0;
-}
-
-/* Navbar Susan Nio (topleft) */
 .topleft{
     position: fixed;
 }
-
 
 .brand{
     font-family: "Dancing Script", cursive;
@@ -65,13 +45,11 @@ hr{
     opacity: 1;
 }
 
-/* Navbar Top Right */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;  
-    /* position: fixed; */
 }
 
 li{
@@ -90,13 +68,27 @@ li a:hover{
     color: rgba(0, 0, 0, 0.897); 
 }
 
-/* Welcome section */
+/* End Navigation Bar */
+
+/* Start Welcome Section */
+section {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px auto; 
+}
+
+section:not(.welcome):nth-child(even) {
+    background-color: #f5f5f5;
+}
+
 .welcome {
 	position: relative;
 	justify-content: center;
 	text-align: center;
 	min-height: 100vh;
-	color: #555;
+    color: #555;
 }
 
 #intro {
@@ -134,11 +126,15 @@ li a:hover{
 		margin: 0;
 	}
 }
+/* End Welcome Section */
 
-/* About Me */
+/* Start About Me Section*/
 section hr{
     background-color: #516bfc;
     margin-bottom: 20px;
+    width: 250px;
+	height: 3px;
+	border: 0;
 }
 
 #about{
@@ -150,7 +146,12 @@ section hr{
     color: #494949;
 }
 
-/* Portfolio Section */
+.about{
+    padding-top:30px;
+}
+/* End About Me Section*/
+
+/* Start Portfolio Section */
 .anchor {
     display: block;
     position: relative;
@@ -159,14 +160,14 @@ section hr{
 }
 
 header{
+    padding-top: 30px;
     text-align: center;
-    min-width: 500px;
 }
 
-header hr {
+/* header hr {
     background-color: #803fb5;
     margin-bottom: 50px;
-}
+} */
 
 h3.title {
 	text-transform: capitalize;
@@ -240,9 +241,9 @@ i {
     padding: 10px 0px 10px 10px;
     border-top: 1px solid #4a4a4a;
 }
+/* End Portfolio Section */
 
-
-/*Footer Section*/
+/* Start Footer Section*/
 footer {
 	display: flex;
 	align-items: center;
@@ -255,30 +256,26 @@ footer {
 footer ul {
 	display: flex;
 	list-style-type: none;
-	
 }
 
 footer ul li {
 	margin-left: 16px;
-
 }
 
 footer .fa{
-  color:white;
-  
+  color:white;  
 }
+/*End Footer Section*/
 
 /* Responsive Styling */
 @media (max-width: 1100px) {
 	footer {
 		flex-direction: column;
 	}
-
 	footer p {
 		text-align: center;
 		margin-bottom: 20px;
 	}
-
 	footer ul li {
 		margin: 0 8px;
     }
@@ -291,17 +288,19 @@ footer .fa{
 	.welcome {
 		min-height: 600px;
 	}
-
 	.welcome h1 {
 		font-size: 48px;
 	}
-
 	.welcome h3 {
 		font-size: 24px;
     }
-    section {
+    /* section {
 		padding: 50px 20px;
-	}
+    } */
+    .about{
+        padding-bottom:0;
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -309,7 +308,6 @@ footer .fa{
         padding: 14px 5px;
         margin-right: 10px;
     }
-   
     .brand a{
         padding-left: 0;   
     }
@@ -323,30 +321,31 @@ footer .fa{
     header hr {
         margin-left: 80px;
     }
-    
     #future {
         text-align: center;
-        font-size:25px;
-        margin-right: 80px;
-       
+        /* font-size:25px;
+        margin-right: 80px; */
     }
     footer {
         padding-right: 25px;
     }
     .brand a{
         float: initial;
-        padding-left:0;
-        
+        padding-left:0; 
     }
     .brand{
         font-family: "Dancing Script", cursive;
         font-weight: 700;
         font-size: 1.4em;
     }
-
     li a{
         font-size: 18px;
     } 
+}
+
+/* Menetralkan float*/
+.clearfix{
+    clear: both;
 }
 
 
