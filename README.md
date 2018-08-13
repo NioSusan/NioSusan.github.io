@@ -7,3 +7,8 @@ Welcome to my first e-portfolio update for 2018! :raising_hand: The objective of
 ## About Me     
 Hi, I'm Susan Nio! I'm an aspiring _Full-Stack Developer_.   
 
+
+[website](https://niosusan.github.io/)  
+[colorGame](https://niosusan.github.io/colorGame/)  
+[musicApp](https://niosusan.github.io/musicApp/circles.html)  
+
